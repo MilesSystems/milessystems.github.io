@@ -1,62 +1,639 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: auto; min-height: 100%;">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
-<style>
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-  header { background-color: #333; padding: 10px 0; color: white; text-align: center; }
-  .container { width: 90%; margin: auto; overflow: hidden; }
-  nav { background: #555; color: white; padding: 10px 0; text-align: center; }
-  nav a { color: white; text-decoration: none; padding: 0 10px; }
-  nav a:hover { background: #666; }
-  .project { margin-bottom: 30px; background: white; padding: 15px; border: 1px solid #ddd; }
-  .project img { max-width: 100%; height: auto; }
-  .project h3 { margin-top: 0; }
-  footer { background-color: #333; color: white; text-align: center; padding: 10px 0; }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Miles Systems LLC</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Google -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+            src="https://www.googletagmanager.com/gtag/js?id=G-KSJP535NFV&amp;l=dataLayer&amp;cx=c"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-100885582-1"></script>
+
+    <!-- JQuery -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- AdminLTE -->
+    <link rel="stylesheet" href="/node_modules/admin-lte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/node_modules/admin-lte/dist/css/skins/skin-red-light.min.css">
+    <!-- Backstretch -->
+    <script src="/node_modules/jquery-backstretch/jquery.backstretch.min.js"></script>
+
+
+    <script>
+
+        // Document ready => jQuery => PJAX => CarbonPHP = loaded
+        function OneTimeEvent(ev, cb) {
+            return document.addEventListener(ev, function fn(event) {
+                document.removeEventListener(ev, fn);
+                return cb(event);
+            });
+        }
+
+        function Carbon(cb) {
+            return OneTimeEvent("Carbon", cb)
+        }
+    </script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
+<!-- Full Width Column -->
+<body class="skin-red-light layout-top-nav fixed  pace-done" style="min-height: 100%; height: auto;">
+<div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99"
+         style="transform: translate3d(100%, 0px, 0px);">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+</div>
+<div class="wrapper" style="background-color: transparent; height: auto; min-height: 100%;">
+    <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand" id="mytitle"><b>Miles</b>.Systems
+                    <small> LLC</small>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!--<li><a href="/About">About Us<span class="sr-only">(current)</span></a></li>
+                    <li><a href="/Portfolio">Portfolio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Strategy <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Designers">The Team</a></li>
+                            <li><a href="/Speed">Quick Content</a></li>
+                            <li><a href="/Turnaround">Our Turnaround</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/Price">Price Point</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/Mail">Contact Us</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://carbonorm.dev/" target="_blank">Explore CarbonORM.dev</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-custom-menu -->
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <footer class="main-footer bg-black" style="border: none; padding-top: 65px">
+        <div class="container">
+            <div class="pull-right hidden-xs">
+                <a href="/Privacy/" class="text-red" style="padding-right: 5px">Privacy Policy</a>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </div>
+            <strong>Copyright © 2014-2017 <a href="/"> <span class="text-red">Richard Miles</span></a></strong>
+            <!--script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script-->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" onload="$('.content-wrapper').height($(document).height());"
+         style="background: transparent; padding-top: 10px; margin-bottom: 40px; min-height: 1249px;">
+        <!--  style="background: transparent"  Add this to use the backstretch fn-->
+        <div id="alert"></div>
+        <!-- content -->
+        <div class="col-md-offset-1 col-md-10">
+            <div id="pjax-content">
+                <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async=""
+                        defer=""></script>
 
-<header>
-  <h1>My Portfolio</h1>
-</header>
 
-<nav>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+                <style>
+                    .websites__outlet {
+                        width: 100%;
+                    }
 
-<section id="projects" class="container">
-  <h2>Projects</h2>
+                    button, input {
+                        border: 1px solid transparent;
+                    }
 
-  <!-- Project 1 -->
-  <div class="project">
-    <img src="game_defense_screenshot.jpg" alt="GameDefense Screenshot">
-    <h3>GameDefense</h3>
-    <p>A vibrant and challenging tower defense game with engaging gameplay and a variety of levels.</p>
-  </div>
+                    button {
+                        background-color: transparent;
+                        padding: 0;
+                    }
 
-  <!-- Project 2 -->
-  <div class="project">
-    <img src="project_2_screenshot.jpg" alt="Project 2 Screenshot">
-    <h3>Project Two</h3>
-    <p>Description of the second project goes here. It can be another game, a mobile app, or any software project.</p>
-  </div>
+                    input, select, textarea, button {
+                        font-family: inherit;
+                    }
 
-  <!-- Add more projects here -->
-  
-</section>
+                    * {
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                    }
 
-<section id="contact" class="container">
-  <h2>Contact</h2>
-  <p>If you're interested in my work and would like to get in touch, please contact me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
-</section>
+                    .top-card-link__logo--link-icon {
+                        background-color: transparent;
+                    }
 
-<footer>
-  <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-</footer>
+                    .top-card-link__logo {
+                        margin-right: 8px;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                    }
 
+                    .top-card-link {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        margin-bottom: 12px;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                    .top-card-link {
+                        font-size: 1.6rem;
+                        line-height: 1.75;
+                        font-weight: 600;
+                        color: rgba(255, 255, 255, 0.9);
+                    }
+
+                    button {
+                        appearance: button;
+                        -webkit-writing-mode: horizontal-tb !important;
+                        text-rendering: auto;
+                        color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+                        letter-spacing: normal;
+                        word-spacing: normal;
+                        text-transform: none;
+                        text-indent: 0px;
+                        text-shadow: none;
+                        display: inline-block;
+                        text-align: center;
+                        align-items: flex-start;
+                        cursor: default;
+                        background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+                        box-sizing: border-box;
+                        margin: 0em;
+                        font: 400 13.3333px Arial;
+                        border-width: 2px;
+                        border-style: outset;
+                        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+                        border-image: initial;
+                    }
+
+                    h2, h3 {
+                        margin: 0;
+                    }
+
+                    section {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        background: transparent;
+                        line-height: 1.5;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.9);
+                    }
+
+                    img {
+                        outline: 0;
+                    }
+
+                    div {
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        background: transparent;
+                        display: block;
+                    }
+
+                    body, p {
+                        font-size: 1.6rem;
+                        line-height: 1.5;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.9);
+                    }
+
+                    .top-card-link__description {
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                    }
+
+                    .top-card-link__description {
+                        line-height: 3.4rem !important;
+                        max-height: 4.8rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .top-card-link__logo {
+                        margin-right: 8px;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                    }
+
+                    .artdeco-entity-image--square-1 {
+                        width: 32px;
+                        height: 32px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        background-clip: content-box;
+                        border: 4px solid rgba(0, 0, 0, 0);
+                        border-radius: 6px;
+                    }
+
+                    .artdeco-entity-image {
+                        display: inline-block;
+                    }
+
+                    .top-card-layout__entity-info--right-column {
+                        margin-left: 24px;
+                        max-width: 288px;
+                    }
+
+                    .top-card-layout__cta.top-card-layout__cta {
+                        margin: 0;
+                        margin-top: 16px;
+                        margin-left: 12px;
+                        background-color: #0073b1;
+                        border: 0;
+                        border-radius: 2px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        font-family: inherit;
+                        line-height: 40px;
+                        overflow: hidden;
+                        outline-width: 2px;
+                        padding: 0 24px;
+                        position: relative;
+                        text-align: center;
+                        text-decoration: none;
+                        transition-duration: 167ms;
+                        transition-property: background-color, box-shadow, color, -webkit-box-shadow;
+                        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                        vertical-align: middle;
+                        z-index: 0;
+                        color: #fff;
+                        height: auto;
+                    }
+
+                    .top-card-layout__cta-container {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        margin-left: -12px;
+                        margin-top: 10px;
+                    }
+
+                    .top-card-layout__first-subline {
+                        font-size: 1.6rem;
+                        line-height: 1.75;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    .top-card-layout__headline {
+                        font-size: 1.6rem;
+                        line-height: 1.75;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.9);
+                    }
+
+                    .top-card-layout__title {
+                        font-size: 2.4rem;
+                        line-height: 1.33333;
+                        font-weight: 600;
+                        color: rgba(255, 255, 255, 0.9);
+                        margin-bottom: 0;
+                    }
+
+                    .top-card-layout__entity-info {
+                        -webkit-box-flex: 1;
+                        -ms-flex: 1 0;
+                        flex: 1 0;
+                    }
+
+                    .top-card-layout__entity-info-container {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                    }
+
+                    .artdeco-entity-image--circle-8 {
+                        width: 128px;
+                        height: 128px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        background-clip: content-box;
+                        border: 0px solid rgba(0, 0, 0, 0);
+                        border-radius: 49.9%;
+                    }
+
+                    .top-card-layout__entity-image {
+                        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+                        -webkit-transition: -webkit-box-shadow 83ms;
+                        transition: -webkit-box-shadow 83ms;
+                        transition: box-shadow 83ms;
+                        transition: box-shadow 83ms, -webkit-box-shadow 83ms;
+                        position: relative;
+                    }
+
+                    .top-card__profile-image-container .top-card__profile-image--ghost-image {
+                        display: none;
+                    }
+
+                    .top-card-layout__entity-image {
+                        border: 4px solid #000;
+                        margin: -100px 0 12px;
+                    }
+
+                    .top-card-layout__card {
+                        padding: 24px;
+                        position: relative;
+                    }
+
+                    .top-card-layout {
+                        border-radius: 2px;
+                    }
+
+                    .cover-img {
+                        width: 100%;
+                        height: 220px;
+                        position: relative;
+                        overflow: hidden;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .top-card-layout__entity-image {
+                        border: 7px solid #000;
+                        margin: -100px 0 12px;
+                    }
+
+                    .top-card-layout__entity-image {
+                        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+                        -webkit-transition: -webkit-box-shadow 83ms;
+                        transition: -webkit-box-shadow 83ms;
+                        transition: box-shadow 83ms;
+                        transition: box-shadow 83ms, -webkit-box-shadow 83ms;
+                        position: relative;
+                    }
+
+                    .artdeco-entity-image--circle-8 {
+                        width: 128px;
+                        height: 128px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        background-clip: content-box;
+                        border: 0px solid rgba(0, 0, 0, 0);
+                        border-radius: 49.9%;
+                    }
+
+                    .top-card-layout .cover-img {
+                        border-radius: 2px 2px 0 0;
+                    }
+
+                    .top-card-layout .cover-img {
+                        height: 198px;
+                    }
+
+                    .lazy-loaded {
+                        opacity: 1;
+                    }
+
+                    .cover-img.lazy-loaded {
+                        background-image: url('/assets/img/Carbon-black.png');
+                    }
+
+                    .artdeco-entity-image {
+                        display: inline-block;
+                    }
+
+                    .top-card-layout--show-current-hide-past-position {
+                        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+                        line-height: 1.5;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.9);
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        display: block;
+                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+                        transition: box-shadow 83ms, -webkit-box-shadow 83ms;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border-radius: 2px;
+                    }
+
+                </style>
+
+                <div class="col-xs-12 col-sm-offset-3 col-sm-9 col-md-offset-5 col-md-7"
+                     style="margin-top: 50px; margin-bottom: 100px">
+                    <!-- login-box -->
+                    <!--
+                    <div class="col-xs-offset-4 col-xs-8 col-sm-offset-4 col-sm-7 col-md-offset-6 col-md-6" style="margin-top: 50px">
+                    <a href="<? /*= SITE */ ?>Designers class">
+                        <blockquote class="pull-right text-gray" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; ">
+                            <h1 class="text-red" style="margin-top: 0"><b>Miles Systems <span style="font-size: medium">LLC</span></b></h1>
+                            <p>We are committed to client success, developing industry leaders, and encouraging lifelong
+                                wellness.</p>
+                            <small>The <cite title="Source Title">Miles Systems llc Team</cite></small>
+                        </blockquote>
+                    </a>-->
+                    <section class="top-card-layout top-card-layout--show-current-hide-past-position">
+                        <figure class="cover-img onload lazy-loaded" data-delayed-background=""
+                                style="background-image: url('/assets/img/Carbon-black.png');"></figure>
+                        <div class="top-card-layout__card">
+                            <div class="top-card__profile-image-container" data-section="picture"><img
+                                    class="artdeco-entity-image artdeco-entity-image--profile artdeco-entity-image--circle-8 top-card-layout__entity-image top-card__profile-image top-card__profile-image--real-image onload lazy-loaded"
+                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-profile"
+                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"
+                                    alt="Richard Tyler Miles" src="/assets/img/defaults/richard2.png"><img
+                                    class="artdeco-entity-image artdeco-entity-image--profile artdeco-entity-image--circle-8 artdeco-entity-image--ghost artdeco-entity-image--ghost-profile top-card-layout__entity-image top-card__profile-image top-card__profile-image--ghost-image onload lazy-loaded"
+                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-profile"
+                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"
+                                    alt="Richard Tyler Miles"
+                                    src="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"></div>
+                            <div class="top-card-layout__entity-info-container">
+                                <div class="top-card-layout__entity-info"><h1 class="top-card-layout__title">Richard
+                                    Tyler
+                                    Miles</h1>
+                                    <h2 class="top-card-layout__headline">Sr. Software Developer &amp; Founder</h2>
+                                    <h3 class="top-card-layout__first-subline"><span class="top-card__subline-item">Highlands Ranch, Colorado</span>
+                                    </h3>
+                                    <div class="top-card-layout__cta-container"><a
+                                            class="top-card-layout__cta top-card-layout__cta--primary"
+                                            href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=richardtmiles&amp;trk=public_profile-settings_top-card-primary-button-join-to-connect"
+                                            data-tracking-control-name="public_profile-settings_top-card-primary-button-join-to-connect"
+                                            data-tracking-will-navigate="">Connect on LinkedIn <i
+                                            class="fa fa-linkedin-square" aria-hidden="true"
+                                            style="padding-left: 5px"></i>
+                                    </a></div>
+                                </div>
+                                <div class="top-card-layout__entity-info top-card-layout__entity-info--right-column">
+                                    <div class="top-card__links-container">
+                                        <div data-section="currentPositionsDetails"
+                                             class="top-card__right-column-link top-card__position-info with-transition">
+                                            <a class="top-card-link top-card-link--link"
+                                               href="https://www.linkedin.com/company/mckesson?trk=public_profile-settings_topcard_current_company"
+                                               data-tracking-will-navigate=""
+                                               data-tracking-control-name="public_profile-settings_topcard_current_company"><img
+                                                    class="artdeco-entity-image artdeco-entity-image--company artdeco-entity-image--square-1 top-card-link__logo lazy-loaded"
+                                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-company"
+                                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/ck48xrmh3ctwna0w2y1hos0ln"
+                                                    alt="McKesson" src="/assets/img/work/dropingaming.jpeg"><span
+                                                    class="top-card-link__description">Drop-in Gaming</span></a></div>
+
+
+                                        <div data-section="pastPositionsDetails"
+                                             class="top-card__right-column-link top-card__position-info with-transition">
+                                            <a class="top-card-link top-card-link--link"
+                                               href="https://www.linkedin.com/company/mckesson?trk=public_profile-settings_topcard_current_company"
+                                               data-tracking-will-navigate=""
+                                               data-tracking-control-name="public_profile-settings_topcard_past_company"><img
+                                                    class="artdeco-entity-image artdeco-entity-image--company artdeco-entity-image--square-1 top-card-link__logo lazy-loaded"
+                                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-company"
+                                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/ck48xrmh3ctwna0w2y1hos0ln"
+                                                    alt="McKesson" src="/assets/img/work/mckesson.jpeg"><span
+                                                    class="top-card-link__description">McKesson</span></a></div>
+
+
+                                        <div data-section="pastPositionsDetails"
+                                             class="top-card__right-column-link top-card__position-info with-transition">
+                                            <a class="top-card-link top-card-link--link"
+                                               href="https://www.linkedin.com/company/praesidium-inc-?trk=public_profile-settings_topcard_past_company"
+                                               data-tracking-will-navigate=""
+                                               data-tracking-control-name="public_profile-settings_topcard_past_company"><img
+                                                    class="artdeco-entity-image artdeco-entity-image--company artdeco-entity-image--square-1 top-card-link__logo lazy-loaded"
+                                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-company"
+                                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/ck48xrmh3ctwna0w2y1hos0ln"
+                                                    alt="Praesidium, Inc." src="/assets/img/work/praesidium.jpeg"><span
+                                                    class="top-card-link__description">Praesidium, Inc.</span></a></div>
+
+
+                                        <div data-section="educationsDetails"
+                                             class="top-card__right-column-link top-card__education-info with-transition">
+                                            <a class="top-card-link top-card-link--link"
+                                               href="https://www.linkedin.com/school/northtexas/?trk=public_profile-settings_topcard_school"
+                                               data-tracking-will-navigate=""
+                                               data-tracking-control-name="public_profile-settings_topcard_school"><img
+                                                    class="artdeco-entity-image artdeco-entity-image--school artdeco-entity-image--square-1 top-card-link__logo lazy-loaded"
+                                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-school"
+                                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/8zyvax2j09k9jfspjn2wi17un"
+                                                    alt="University of North Texas"
+                                                    src="/assets/img/work/northtexas.png"><span
+                                                    class="top-card-link__description">University of North Texas</span></a>
+                                        </div>
+
+
+                                        <a href="/Portfolio">
+                                            <div data-section="websites"
+                                                 class="top-card__right-column-link top-card__websites with-transition">
+                                                <div>
+                                                    <button class="modal__outlet websites__outlet"
+                                                            data-tracking-control-name="public_profile-settings_websites-modal-outlet"
+                                                            data-modal="default-outlet">
+                                                        <div class="top-card-link">
+                                                            <img class="top-card-link__logo top-card-link__logo--link-icon artdeco-entity-image artdeco-entity-image--square-1 lazy-loaded"
+                                                                 alt="Websites" aria-hidden="true"
+                                                                 src="https://static-exp1.licdn.com/sc/h/9o8qqup6da04vhqijz8ft1j5g">
+                                                            <span class="top-card-link__description">Portfolio</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <script>
+                    Carbon(() => {
+                        $('.wrapper').css('background-color', 'transparent');
+                        let remove = () => $('.wrapper').css('background-color', 'rgba(0, 0, 0, 0.7)');
+                        $(document).off("pjax:beforeSend", remove).on("pjax:beforeSend", remove);
+                    });
+                </script>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- /.content -->
+        <div class="clearfix"></div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <script>
+        /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+        (((w) => {
+            let loadJS;
+            loadJS = (src, cb) => {
+                "use strict";
+                let ref = w.document.getElementsByTagName("script")[0];
+                let script = w.document.createElement("script");
+                script.src = src;
+                script.async = true;
+                ref.parentNode.insertBefore(script, ref);
+                if (cb && typeof (cb) === "function")
+                    script.onload = cb;
+
+                return script;
+            }; // commonjs
+            if (typeof module !== "undefined") module.exports = loadJS;
+            else w.loadJS = loadJS;
+        })(typeof global !== "undefined" ? global : this));// Hierarchical PJAX Request
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-100885582-1');
+    </script>
+
+</div>
+<script>
+    function load_backStretch(img, selector) {
+        $(selector).length ? $(selector).backstretch(img) : $.backstretch(img)
+    }
+
+    $.fn.load_backStretch = $.load_backStretch = load_backStretch;
+
+    $.load_backStretch('/assets/img/Carbon-red.png');
+</script>
 </body>
 </html>
