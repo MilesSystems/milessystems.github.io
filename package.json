@@ -1,10 +1,10 @@
 {
-  "name": "stats.coach",
+  "name": "richardtmiles.github.io",
   "version": "1.0.0",
   "description": "A stats website for coaches",
-  "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./"
   },
   "dependencies": {
     "admin-lte": "2.4",
@@ -13,17 +13,18 @@
     "jquery-pjax": "^2.0.1",
     "mustache": "^2.3.0"
   },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20.11.17",
+    "parcel": "^2.11.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RichardTMiles/Stats.Coach.git"
+    "url": "git+https://github.com/RichardTMiles/richardtmiles.githuhb.io.git"
   },
   "keywords": [
     "golf"
   ],
   "author": "Richard Miles",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RichardTMiles/Stats.Coach/issues"
-  },
-  "homepage": "https://github.com/RichardTMiles/Stats.Coach#readme"
+  "license": "MIT"
 }
