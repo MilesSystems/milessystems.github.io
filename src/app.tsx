@@ -11,14 +11,6 @@ export default function App() {
 
     console.log("App TSX RENDER");
 
-    const {isLoaded, backendThrowable, pureWordpressPluginConfigured} = this.state;
-
-    if (!isLoaded) {
-
-        return <h2>Loading...</h2>;
-
-    }
-
     const reactRouterContext = (children: any) => {
 
         if (isTest) {
