@@ -1,0 +1,34 @@
+{
+  "name": "richardtmiles.github.io",
+  "version": "1.0.0",
+  "description": "A stats website for coaches",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "dependencies": {
+    "admin-lte": "2.4",
+    "jquery-backstretch": "2.1.16",
+    "jquery-form": "^4.2.2",
+    "jquery-pjax": "^2.0.1",
+    "mustache": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "parcel": "^2.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardTMiles/richardtmiles.githuhb.io.git"
+  },
+  "keywords": [
+    "golf"
+  ],
+  "author": "Richard Miles",
+  "license": "MIT"
+}
