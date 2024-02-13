@@ -17,9 +17,11 @@ $(()=>{
 
 })
 
-const container = document.getElementById("app");
+const rootHTML = document.createElement('div');
 
-const root = createRoot(container)
+document.body.appendChild(rootHTML);
+
+const root = createRoot(rootHTML)
 
 root.render(<Privacy/>);
 
