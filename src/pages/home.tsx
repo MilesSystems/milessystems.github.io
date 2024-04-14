@@ -14,17 +14,16 @@ export default function home() {
                                 className="artdeco-entity-image artdeco-entity-image--profile artdeco-entity-image--circle-8 top-card-layout__entity-image top-card__profile-image top-card__profile-image--real-image onload lazy-loaded"
                                 data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-profile"
                                 data-ghost-url="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"
-                                alt="Richard Tyler Miles" src="/assets/img/defaults/richard2.png"/><img
-                                className="artdeco-entity-image artdeco-entity-image--profile artdeco-entity-image--circle-8 artdeco-entity-image--ghost artdeco-entity-image--ghost-profile top-card-layout__entity-image top-card__profile-image top-card__profile-image--ghost-image onload lazy-loaded"
-                                data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-profile"
-                                data-ghost-url="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"
-                                alt="Richard Tyler Miles"
-                                src="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"/></div>
+                                alt="Richard Tyler Miles" src="/assets/img/defaults/richard2.png"/>
+                                <img
+                                    className="artdeco-entity-image artdeco-entity-image--profile artdeco-entity-image--circle-8 artdeco-entity-image--ghost artdeco-entity-image--ghost-profile top-card-layout__entity-image top-card__profile-image top-card__profile-image--ghost-image onload lazy-loaded"
+                                    data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-profile"
+                                    data-ghost-url="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"
+                                    alt="Richard Tyler Miles"
+                                    src="https://static-exp1.licdn.com/sc/h/djzv59yelk5urv2ujlazfyvrk"/></div>
                             <div className="top-card-layout__entity-info-container">
-                                <div className="top-card-layout__entity-info"><h1
-                                    className="top-card-layout__title">Richard
-                                    Tyler
-                                    Miles</h1>
+                                <div className="top-card-layout__entity-info">
+                                    <h1 className="top-card-layout__title">Richard Tyler Miles</h1>
                                     <h2 className="top-card-layout__headline">Sr. Software Developer &amp; Founder</h2>
                                     <h3 className="top-card-layout__first-subline"><span
                                         className="top-card__subline-item">Highlands Ranch, Colorado</span>
@@ -37,7 +36,15 @@ export default function home() {
                                             data-tracking-will-navigate="">Message on LinkedIn <i
                                             className="fa fa-linkedin-square" aria-hidden="true"
                                             style={{paddingLeft: "5px"}}></i>
-                                        </a></div>
+                                        </a>
+                                        <a
+                                            className="top-card-layout__cta top-card-layout__cta--success"
+                                            href="/"
+                                            data-tracking-will-navigate="">Download Resume<i
+                                            className="fa fa-linkedin-square" aria-hidden="true"
+                                            style={{paddingLeft: "5px"}}></i>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div
                                     className="top-card-layout__entity-info top-card-layout__entity-info--right-column">

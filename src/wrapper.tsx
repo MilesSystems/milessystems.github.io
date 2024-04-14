@@ -115,22 +115,51 @@ export default function Wrapper() {
                                             Miles</h1>
                                             <h2 className="top-card-layout__headline">Sr. Software
                                                 Developer &amp; Founder</h2>
-                                            <h3 className="top-card-layout__first-subline"><span
-                                                className="top-card__subline-item">Highlands Ranch, Colorado</span>
+                                            <h3 className="top-card-layout__first-subline">
+                                                <div className="top-card__subline-item">
+                                                    Highlands Ranch, Colorado<br/>
+                                                    Richard@Miles.Systems<br/>
+                                                    (817) 789-3294<br/>
+                                                </div>
                                             </h3>
                                             <div className="top-card-layout__cta-container">
                                                 <a
                                                     className="top-card-layout__cta top-card-layout__cta--primary"
-                                                    href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=richardtmiles&amp;trk=public_profile-settings_top-card-primary-button-join-to-connect"
-                                                    data-tracking-control-name="public_profile-settings_top-card-primary-button-join-to-connect"
-                                                    data-tracking-will-navigate="">Message on LinkedIn <i
-                                                    className="fa fa-linkedin-square" aria-hidden="true"
-                                                    style={{paddingLeft: "5px"}}></i>
-                                                </a></div>
+                                                    href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=richardtmiles&amp;trk=public_profile-settings_top-card-primary-button-join-to-connect">
+                                                    Connect On LinkedIn
+                                                    <i className="fa fa-linkedin-square" aria-hidden="true"
+                                                       style={{padding: "0 15px"}}></i>
+                                                </a>
+                                                <a
+                                                    className="top-card-layout__cta top-card-layout__cta--success"
+                                                    style={{backgroundColor: "#27c02a"}}
+                                                    href="https://github.com/RichardTMiles/resume/blob/main/RichardTylerMiles.pdf">
+                                                    Check Out My Resume
+                                                    <i className="fa fa-paper-plane"
+                                                       aria-hidden="true"
+                                                       style={{padding: "0 7px"}}></i>
+                                                </a>
+                                            </div>
                                         </div>
                                         <div
                                             className="top-card-layout__entity-info top-card-layout__entity-info--right-column">
                                             <div className="top-card__links-container">
+
+
+                                                <div data-section="currentPositionsDetails"
+                                                     className="top-card__right-column-link top-card__position-info with-transition">
+                                                    <a className="top-card-link top-card-link--link"
+                                                       href="https://www.linkedin.com/company/mckesson?trk=public_profile-settings_topcard_current_company"
+                                                       data-tracking-will-navigate=""
+                                                       data-tracking-control-name="public_profile-settings_topcard_current_company"><img
+                                                        className="artdeco-entity-image artdeco-entity-image--company artdeco-entity-image--square-1 top-card-link__logo lazy-loaded"
+                                                        data-ghost-classes="artdeco-entity-image--ghost artdeco-entity-image--ghost-company"
+                                                        data-ghost-url="https://www.linkedin.com/company/miles-systems-llc/"
+                                                        alt="McKesson" src="/assets/img/work/milesSystemsLLC.png"/><span
+                                                        className="top-card-link__description">Miles Systems LLC</span></a>
+                                                </div>
+
+
                                                 <div data-section="currentPositionsDetails"
                                                      className="top-card__right-column-link top-card__position-info with-transition">
                                                     <a className="top-card-link top-card-link--link"
