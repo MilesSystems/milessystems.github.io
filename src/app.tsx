@@ -1,4 +1,6 @@
-import Privacy from "./pages/privacy";
+import About, {ABOUT} from "./pages/about";
+import Portfolio, {PORTFOLIO} from "./pages/Portfolio";
+import Privacy, {PRIVACY} from "./pages/privacy";
 import Home from "./pages/home";
 import {ppr} from "./hoc/passPropertiesAndRender";
 import Wrapper from "./wrapper";
@@ -25,8 +27,10 @@ export default function App() {
 
     return reactRouterContext(<>
         <Routes>
-            <Route path={'*'} element={ppr(Wrapper, {})}>
-                <Route path={'privacy/*'} element={ppr(Privacy, {})}/>
+            <Route path={'/*'} element={ppr(Wrapper, {})}>
+                <Route path={ABOUT} element={ppr(About, {})}/>
+                <Route path={PORTFOLIO} element={ppr(Portfolio, {})}/>
+                <Route path={PRIVACY} element={ppr(Privacy, {})}/>
                 <Route path={'*'} element={ppr(Home, {})}/>
             </Route>
         </Routes>
