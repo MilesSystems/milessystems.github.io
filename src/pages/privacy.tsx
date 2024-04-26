@@ -1,8 +1,12 @@
+
+export const PRIVACY = 'privacy/'
+
 export default function Privacy() {
 
     return <div className="col-md-offset-1 col-md-10">
-        <div id="pjax-content">
-            <section className="invoice">
+            <section className="invoice" style={{
+                backgroundColor: "black"
+            }}>
                 <div className="row">
                     <div className="col-xs-12">
                         <h2 className="page-header">
@@ -97,6 +101,5 @@ export default function Privacy() {
                 </div>
 
             </section>
-        </div>
     </div>
 }
