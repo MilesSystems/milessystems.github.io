@@ -159,8 +159,8 @@ export default function home() {
                                                         className="top-card-link__logo top-card-link__logo--link-icon artdeco-entity-image artdeco-entity-image--square-1 lazy-loaded"
                                                         alt="Websites" aria-hidden="true"
                                                         src="https://static-exp1.licdn.com/sc/h/9o8qqup6da04vhqijz8ft1j5g"/>
-                                                    <span
-                                                        className="top-card-link__description">Portfolio</span>
+                                                    <a href={"https://github.com/RichardTMiles/"}
+                                                        className="top-card-link__description">GitHub</a>
                                                 </div>
                                             </button>
                                         </div>
