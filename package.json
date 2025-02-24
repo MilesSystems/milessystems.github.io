@@ -7,19 +7,14 @@
     "build": "parcel build src/index.html --public-url ./"
   },
   "dependencies": {
-    "admin-lte": "2.4",
+    "admin-lte": "4.0.0-beta3",
     "axios": "^1.6.7",
     "history": "^5.3.0",
-    "jquery-backstretch": "2.1.16",
-    "jquery-form": "^4.2.2",
-    "jquery-pjax": "^2.0.1",
-    "mustache": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.29",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
