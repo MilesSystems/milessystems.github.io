@@ -4,8 +4,8 @@
 export const PORTFOLIO = 'portfolio/'
 
 export default function Portfolio() {
-    return <>
-        <div className="row" style={{marginTop: "30px"}}>
+    return <div className="container">
+        <div className="row" style={{marginTop: "8vh"}}>
             <div className="col-sm-12 col-md-12">
                 <div className="box box-solid bg-gray">
                     <div className="box-body">
@@ -145,5 +145,5 @@ export default function Portfolio() {
             </div-->
         </div>*/}
         </div>
-    </>
+    </div>
 }

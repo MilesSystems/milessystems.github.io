@@ -3,7 +3,7 @@ export const PRIVACY = 'privacy/'
 
 export default function Privacy() {
 
-    return <div className="col-md-offset-1 col-md-10">
+    return <div className="container">
             <section className="invoice" style={{
                 backgroundColor: "black"
             }}>

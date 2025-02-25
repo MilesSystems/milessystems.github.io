@@ -1,27 +1,16 @@
-import "/node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "/node_modules/admin-lte/dist/css/AdminLTE.min.css"
-import "/node_modules/admin-lte/dist/css/skins/skin-red-light.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "admin-lte/dist/css/adminlte.min.css";
+
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Includes Popper.js
+import "admin-lte/dist/js/adminlte.min.js";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./style.scss"
+
 import { createRoot } from "react-dom/client";
-
-import * as jQuery from "jquery"
-
-import "/node_modules/font-awesome/css/font-awesome.css"
 import App from "./app";
 
-// @ts-ignore
-window.$ = window.jQuery = jQuery
-
-$(()=>{
-
-    require("/node_modules/bootstrap/dist/js/bootstrap.min.js")
-
-})
-
-const rootHTML = document.createElement('div');
-
+const rootHTML = document.createElement("div");
 document.body.appendChild(rootHTML);
 
-const root = createRoot(rootHTML)
-
-root.render(<App/>);
-
+const root = createRoot(rootHTML);
+root.render(<App />);
