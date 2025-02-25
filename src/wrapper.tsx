@@ -1,6 +1,7 @@
 import {PropsWithChildren} from "react";
 import CarbonRed from "src/assets/img/Carbon-red.png";
 import {Link} from "react-router-dom";
+import logo from "assets/img/Full-Carbon-full-logo.png"
 
 export default function Wrapper({children}: PropsWithChildren<{}>) {
     return (
@@ -17,9 +18,14 @@ export default function Wrapper({children}: PropsWithChildren<{}>) {
         >
             <div className="wrapper" style={{backgroundColor: "transparent", height: "100vh", overflow: "scroll"}}>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" style={{height: "8vh"}}>
-                    <div className="container-fluid m-0">
+                    <div className="container-fluid m-2">
+                        <img src={logo} style={{
+                            maxHeight: "7vh",
+                            paddingTop: ".3vh",
+                            paddingRight: ".1vh"
+                        }}/>
                         <a href="/" className="navbar-brand ms-3" style={{
-                            fontSize: "1.3em"
+                            fontSize: "1.4em"
                         }}>
                             <b>Miles</b>.Systems <small>LLC</small>
                         </a>
@@ -50,9 +56,9 @@ export default function Wrapper({children}: PropsWithChildren<{}>) {
                         </div>
                     </div>
                 </nav>
-                <footer className="main-footer bg-black" style={{height: "8vh", paddingTop: "8vh"}}>
+                <footer className="main-footer bg-black ms-5 me-5" style={{height: "8vh", marginTop: "8vh"}}>
                     <div className="container-fluid">
-                        <div className="row">
+                        <div className="row pt-3">
                             <div className="col-6">
                                 <strong>
                                     Copyright © 2014-2017{" "}
@@ -70,7 +76,7 @@ export default function Wrapper({children}: PropsWithChildren<{}>) {
                         </div>
                     </div>
                 </footer>
-                <div className="content-wrapper" style={{backgroundColor: "transparent", marginTop: "8vh"}}>
+                <div className="content-wrapper" style={{backgroundColor: "transparent"}}>
                     <div id="alert"></div>
                     {children}
                 </div>
